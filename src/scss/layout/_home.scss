@@ -1,0 +1,52 @@
+.home {
+  &__nav {
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15%;
+    &--links {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  &__social {
+    margin: 20px 20px 20px 20px;
+  }
+  &__article {
+    &--name {
+      margin: 0 0 10px 20px;
+    }
+    &--title {
+      margin: 0 0 10px 20px;
+    }
+    &--text {
+      margin: 0 0 20px 20px;
+    }
+    &--button {
+      margin: 0 0 0 20px;
+      background-color: black;
+      color: white;
+      padding: 10px 10px 10px 10px;
+      border-radius: 10px;
+    }
+  }
+  &__photo{
+    &--img{
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+.fa-brands {
+  margin-bottom: 20px;
+}
+
+a:link {
+  text-decoration: none;
+}

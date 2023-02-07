@@ -1,0 +1,53 @@
+{
+  "name": "elenarentero-portfolio",
+  "version": "1.0.0",
+  "description": "Mi portfolio profesional",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "rm -rf docs && ./node_modules/.bin/gulp docs",
+    "push-docs": "rm -rf docs && gulp docs && git add docs/* && git commit -m \"Update docs\" && git push",
+    "deploy": "npm run push-docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElenaRentero/elenarentero-portfolio.git"
+  },
+  "author": "ElenaRentero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElenaRentero/elenarentero-portfolio/issues"
+  },
+  "homepage": "https://github.com/ElenaRentero/elenarentero-portfolio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.0",
+    "standard": "^17.0.0",
+    "lodash.template": ">=4.5.0"
+  },
+  "dependencies": {
+    "gulp-uglifycss": "^1.1.0",
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-html-tag-include": "^1.0.1",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-zip": "*",
+    "node-sass": "^6.0.1",
+    "run-sequence": "*",
+    "sass": "^1.35.2"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}
