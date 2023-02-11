@@ -1,30 +1,19 @@
-.home {
-  &__nav {
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5%;
-    &--links {
-      display: flex;
-      gap: 30px;
-    }
-  }
-}
-
 .profile {
   display: flex;
   justify-content: space-around;
-  height: 100vh;
+  height: 92vh;
   &__social {
     margin: 20px 20px 20px 20px;
     height: 400px;
     display: flex;
     align-items: center;
     padding-right: 20px;
+    margin-left: -70px;
   }
   &__article {
     &--name {
       margin: 0 0 10px 20px;
+      margin-bottom: 0.5rem;
     }
     &--title {
       margin: 0 0 10px 20px;
@@ -72,6 +61,19 @@
   margin-bottom: 40px;
 }
 
+.fa-brands:hover{
+  background-image: linear-gradient(
+  45deg,
+  var(--base) 25%,
+  var(--complimentary2)
+);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-background-clip: text;
+-moz-text-fill-color: transparent;
+}
+
 .orb-canvas {
   position: fixed;
   top: 0;
@@ -102,7 +104,7 @@
   line-height: 2.75rem;
   font-weight: 700;
   letter-spacing: -0.025em;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .text-gradient {
@@ -122,6 +124,7 @@
   font-size: 1rem;
   line-height: 1.75rem;
   margin-bottom: 3rem;
+  width: 90%;
 }
 
 .overlay__btns {
@@ -227,4 +230,28 @@ a {
   .overlay__btn:first-child {
     margin-bottom: 1rem;
   }
+}
+
+.wave {
+  animation-name: wave-animation;  
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite; 
+  transform-origin: 70% 70%;
+  display: inline-block;
+  font-family: 'Noto Color Emoji', sans-serif;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) } 
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.move{
+  transform: translate(200px, -25px);
 }
