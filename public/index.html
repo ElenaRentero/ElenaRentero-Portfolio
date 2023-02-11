@@ -17,13 +17,12 @@
 <body>
     <header class="home">
         <nav class="home__nav">
-            <div class="home__nav--logo"><a href="">Elena Rentero</a></div>
             <ul class="home__nav--links">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Sobre mí</a></li>
+                <li><a href="">Habilidades</a></li>
+                <li><a href="">Proyectos</a></li>
+                <li><a href="">Contacta conmigo</a></li>
             </ul>
         </nav>
     </header>
@@ -36,22 +35,42 @@
                 <li><i class="fa-brands fa-twitter"></i></li>
             </ul>
         </div>
-        <article class="profile__article">
-            <h1 class="profile__article--name">Elena</h1>
-            <h2 class="profile__article--title">Desarrolladora Web Junior</h2>
-            <p class="profile__article--text">Desarolladora web actualmente situada en Málaga, busco unirme a un equipo
-                dinámico y colaborativo en el que pueda desarrollar mis habilidades.</p>
-            <button class="profile__article--button">Contacta conmigo</button>
-        </article>
-        <div class="profile__photo">
-            <img class="profile__photo--img" src="./assets/images/photo.jpg" alt="Foto personal"/>
+        <!-- Canvas -->
+        <canvas class="orb-canvas" style="background-color: transparent;"></canvas>
+        <!-- Overlay -->
+        <div class="overlay">
+            <!-- Overlay inner wrapper -->
+            <div class="overlay__inner profile__article">
+                <h1 class="profile__article--name text-gradient">Elena</h1>
+                <h2 class="profile__article--title overlay__title">Desarrolladora Web Junior</h2>
+                <p class="profile__article--text overlay__description">Desarolladora web actualmente situada en Málaga,
+                    busco unirme a un
+                    equipo
+                    dinámico y colaborativo en el que pueda desarrollar mis habilidades.</p>
+                <!-- Buttons -->
+                <div class="overlay__btns">
+                    <button class="overlay__btn overlay__btn--transparent profile__article--button">Contacta
+                        conmigo</button>
+                </div>
+            </div>
+            <div class="profile__photo">
+                <img class="profile__photo--img" src="./assets/images/photo.jpg" alt="Foto personal" />
+            </div>
         </div>
+        </div>
+    </section>
+    <section class="about">
+        <article class="about__article">
+            <h1 class="about__article--name">Sobre mí</h1>
+            <p class="about__article--text"></p>
+        </article>
+        <button class="overlay__btn overlay__btn--transparent about__article--button">Descarga CV</button>
     </section>
     
     
     
-    
     <script src="./assets/js/main.js"></script>
+    <!--<script src="./assets/js/main.js"></script>-->
 </body>
 
 </html>
