@@ -15,16 +15,6 @@ const uglify = require('gulp-uglify-es').default
 
 // secondary tasks
 
-gulp.task('api', (done) => {
-  gulp.src(config.api.src).pipe(gulp.dest(config.api.dest))
-  done()
-})
-
-gulp.task('api-dist', (done) => {
-  gulp.src(config.api.src).pipe(gulp.dest(config.api.dist))
-  done()
-})
-
 gulp.task('bs-reload', (done) => {
   browserSync.reload()
   done()
@@ -42,7 +32,6 @@ gulp.task('css', (done) => {
       plumber({ errorHandler: notify.onError('Error: <%= error.message %>') })
     )
     .pipe(sass({ outputStyle: 'extended' }))
-    // .pipe(combineMq({ beautify: true }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.css.dest))
@@ -88,26 +77,6 @@ gulp.task('images', (done) => {
   done()
 })
 
-gulp.task('data', (done) => {
-  gulp
-    .src(config.data.src)
-    .pipe(
-      plumber({ errorHandler: notify.onError('Error: <%= error.message %>') })
-    )
-    .pipe(gulp.dest(config.data.dest))
-  done()
-})
-
-gulp.task('data-dist', (done) => {
-  gulp
-    .src(config.data.src)
-    .pipe(
-      plumber({ errorHandler: notify.onError('Error: <%= error.message %>') })
-    )
-    .pipe(gulp.dest(config.data.dist))
-  done()
-})
-
 gulp.task('js', (done) => {
   gulp
     .src(config.js.src)
@@ -144,18 +113,23 @@ gulp.task('images-dist', (done) => {
   done()
 })
 
+gulp.task('copy-data', function () {
+  return gulp.src('src/data/**/*')
+    .pipe(gulp.dest('public/assets/data'))
+    .pipe(gulp.dest(config.data.dist))
+})
+
 // main tasks
 
 gulp.task(
   'default',
   gulp.series(
-    ['clean', 'api', 'html', 'css', 'js', 'images', 'data'],
+    ['clean', 'html', 'css', 'js', 'images', 'copy-data'],
     (done) => {
       browserSync.init({ server: { baseDir: './public/' } })
-      gulp.watch(config.api.src, gulp.series(['api', 'bs-reload']))
       gulp.watch(config.css.src, gulp.series('css'))
       gulp.watch(config.images.src, gulp.series(['images', 'bs-reload']))
-      gulp.watch(config.data.src, gulp.series(['data', 'bs-reload']))
+      gulp.watch(config.data.src, gulp.series(['copy-data', 'bs-reload']))
       gulp.watch(config.js.src, gulp.series(['js', 'bs-reload']))
       gulp.watch(config.watch.html, gulp.series(['html', 'bs-reload']))
       done()
@@ -168,12 +142,11 @@ gulp.task(
   gulp.series(
     [
       'clean-dist',
-      'api-dist',
       'css-dist',
       'html-dist',
       'js-dist',
       'images-dist',
-      'data-dist'
+      'copy-data'
     ],
     (done) => done()
   )

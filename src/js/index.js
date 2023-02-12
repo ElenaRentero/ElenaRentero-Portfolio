@@ -6,6 +6,20 @@ const { createNoise2D } = require('simplex-noise')
 const hsl = require('hsl-to-hex')
 const debounce = require('debounce')
 
+const scrollTopBtn = document.querySelector('.scroll-top-btn')
+const downloadButton = document.getElementById('download-cv-button')
+
+scrollTopBtn.addEventListener('click', function () {
+  window.scrollTo(0, 0)
+})
+
+downloadButton.addEventListener('click', function () {
+  const link = document.createElement('a')
+  link.href = './assets/data/CV.pdf'
+  link.download = 'CV Elena Clemente Rentero. Junior Full-stack developer.pdf'
+  link.click()
+})
+
 // return a random number within a range
 function random (min, max) {
   return Math.random() * (max - min) + min

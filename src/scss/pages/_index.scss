@@ -35,3 +35,7 @@ body {
   color: var(--dark-color);
   background: var(--bg-gradient);
 }
+
+.profile, .about, .skills {
+  height: 100vh;
+}
