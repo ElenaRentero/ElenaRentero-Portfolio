@@ -3,7 +3,7 @@
   justify-content: space-around;
   &__social {
     margin: 20px 20px 20px 20px;
-    height: 400px;
+    height: 450px;
     display: flex;
     align-items: center;
     padding-right: 20px;
@@ -57,20 +57,21 @@
 }
 
 .fa-brands {
-  margin-bottom: 40px;
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: 3rem;
 }
 
 .fa-brands:hover{
-  background-image: linear-gradient(
+  background-color: linear-gradient(
   45deg,
   var(--base) 25%,
   var(--complimentary2)
 );
-background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
--moz-background-clip: text;
--moz-text-fill-color: transparent;
+background-clip: text;
+color: transparent;
 }
 
 .orb-canvas {
