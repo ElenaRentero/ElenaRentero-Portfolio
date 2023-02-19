@@ -341,7 +341,7 @@ ul {
       font-size: 0.9rem;
       font-weight: 700;
       color: var(--dark-color);
-      margin-bottom: 1rem; }
+      margin-bottom: 2rem; }
       @media all and (min-width: 700px) {
         .about__article--name {
           font-size: 1.5rem; } }
