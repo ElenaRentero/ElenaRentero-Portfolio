@@ -8,15 +8,17 @@
         </ul>
     </div>
     <!-- Canvas -->
-    <canvas class="orb-canvas" style="background-color: transparent;"></canvas>
+    <canvas class="orb-canvas" id="miCanvas" style="background-color: transparent;"></canvas>
     <!-- Overlay -->
     <div class="overlay">
         <!-- Overlay inner wrapper -->
         <div class="overlay__inner profile__article">
+            <div class="profile__photo">
+                <img class="profile__photo--img" src="./assets/images/photo.jpg" alt="Foto personal" />
+            </div>
             <h1 class="profile__article--name text-gradient">Elena Clemente Rentero</h1>
-            <div class="move"><span class="wave">👋</span></div>
-            <h2 class="profile__article--title overlay__title">Desarrolladora Web Junior</h2>
-            <p class="profile__article--text overlay__description">Desarolladora web actualmente situada en Málaga,
+            <h2 class="profile__article--title">Desarrolladora Web Junior</h2>
+            <p class="profile__article--text">Desarolladora web actualmente situada en Málaga,
                 busco unirme a un
                 equipo
                 dinámico y colaborativo en el que pueda desarrollar mis habilidades.</p>
@@ -25,9 +27,7 @@
                 <a class="overlay__btn overlay__btn--transparent profile__article--button" target="_blank" rel="noreferrer" href=mailto:elenaclementerentero@gmail.com>Contacta conmigo</a>
             </div>
         </div>
-        <div class="profile__photo">
-            <img class="profile__photo--img" src="./assets/images/photo.jpg" alt="Foto personal" />
-        </div>
+
     </div>
     <button id="scrollTopBtn" class="scroll-top-btn"><img height="20px" src="./assets/images/scroll.png" alt="Subir al inicio"></button>
 </section>

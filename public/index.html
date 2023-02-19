@@ -20,11 +20,11 @@
     <header class="home" id="home">
         <nav class="home__nav">
             <ul class="home__nav--links">
-                <li><a class="link" href="#home">Inicio</a></li>
-                <li><a class="link" href="#about">Sobre mí</a></li>
-                <li><a class="link" href="#skills">Habilidades</a></li>
-                <li><a class="link" href="#projects">Proyectos</a></li>
-                <li><a class="link" href="#contact">Contacta conmigo</a></li>
+                <li class="element"><a class="link" href="#home">Inicio</a></li>
+                <li class="element"><a class="link" href="#about">Sobre mí</a></li>
+                <li class="element"><a class="link" href="#skills">Habilidades</a></li>
+                <li class="element"><a class="link" href="#projects">Proyectos</a></li>
+                <li class="element"><a class="link" href="#contact">Contacta conmigo</a></li>
             </ul>
         </nav>
     </header>
@@ -38,15 +38,17 @@
             </ul>
         </div>
         <!-- Canvas -->
-        <canvas class="orb-canvas" style="background-color: transparent;"></canvas>
+        <canvas class="orb-canvas" id="miCanvas" style="background-color: transparent;"></canvas>
         <!-- Overlay -->
         <div class="overlay">
             <!-- Overlay inner wrapper -->
             <div class="overlay__inner profile__article">
+                <div class="profile__photo">
+                    <img class="profile__photo--img" src="./assets/images/photo.jpg" alt="Foto personal" />
+                </div>
                 <h1 class="profile__article--name text-gradient">Elena Clemente Rentero</h1>
-                <div class="move"><span class="wave">👋</span></div>
-                <h2 class="profile__article--title overlay__title">Desarrolladora Web Junior</h2>
-                <p class="profile__article--text overlay__description">Desarolladora web actualmente situada en Málaga,
+                <h2 class="profile__article--title">Desarrolladora Web Junior</h2>
+                <p class="profile__article--text">Desarolladora web actualmente situada en Málaga,
                     busco unirme a un
                     equipo
                     dinámico y colaborativo en el que pueda desarrollar mis habilidades.</p>
@@ -55,9 +57,7 @@
                     <a class="overlay__btn overlay__btn--transparent profile__article--button" target="_blank" rel="noreferrer" href=mailto:elenaclementerentero@gmail.com>Contacta conmigo</a>
                 </div>
             </div>
-            <div class="profile__photo">
-                <img class="profile__photo--img" src="./assets/images/photo.jpg" alt="Foto personal" />
-            </div>
+
         </div>
         <button id="scrollTopBtn" class="scroll-top-btn"><img height="20px" src="./assets/images/scroll.png" alt="Subir al inicio"></button>
     </section>
@@ -68,8 +68,8 @@
         <article class="about__article">
             <h1 class="about__article--name">Sobre mí</h1>
             <p class="about__article--text">Tras trabajar en el ámbito cultural y de la atención al cliente, decidí dar un cambio a mi vida entrando de lleno en el mundo de las nuevas tecnologías y la programación. Soy una persona proactiva y con ganas de aprender, busco mi primera oportunidad en el campo del desarrollo web. Eficiente, responsable y motivada, dispuesta a aportar mi granito de arena en proyectos y aprender de profesionales con experiencia. Busco unirme a un equipo dinámico y colaborativo en el que pueda desarrollar mis habilidades.</p>
+            <button class="overlay__btn overlay__btn--transparent about__article--button" id="download-cv-button">Descarga CV</button>
         </article>
-        <button class="overlay__btn overlay__btn--transparent about__article--button" id="download-cv-button">Descarga CV</button>
     </section>
     <section class="skills" id="skills">
         <h1 class="skills__title">Habilidades</h1>
@@ -112,6 +112,11 @@
         <div class="projects__list">
             <article class="projects__article">
                 <h2 class="projects__article--title">Rick and Morty Project</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-react"></i></li>
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-sass"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/rickandmorty.png"
                     alt="Rick & Morty Project">
                 <ul class="projects__article--links">
@@ -123,6 +128,11 @@
             </article>
             <article class="projects__article">
                 <h2 class="projects__article--title">To Do App</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-react"></i></li>
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-sass"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/todoapp.png" alt="To Do App">
                 <ul class="projects__article--links">
                     <a class="link" href="https://github.com/ElenaRentero/to-do-app" target=”_blank”><i
@@ -133,6 +143,10 @@
             </article>
             <article class="projects__article">
                 <h2 class="projects__article--title">Breaking Bad Project</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-sass"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/breakingbad.png" alt="Breaking Bad Project">
                 <ul class="projects__article--links">
                     <a class="link" href="https://github.com/ElenaRentero/breaking-bad-project" target=”_blank”><i
@@ -143,6 +157,12 @@
             </article>
             <article class="projects__article">
                 <h2 class="projects__article--title">AdaCards Project</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-node-js"></i></li>
+                    <li><i class="fa-brands fa-react"></i></li>
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-sass"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/adacards.png" alt="AdaCards Project">
                 <ul class="projects__article--links">
                     <a class="link" href="https://github.com/ElenaRentero/adacards-project" target=”_blank”><i
@@ -153,6 +173,10 @@
             </article>
             <article class="projects__article">
                 <h2 class="projects__article--title">Rings of Power Game</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-css3-alt"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/ringsofpower.png" alt="Rings of Power Game">
                 <ul class="projects__article--links">
                     <a class="link" href="https://github.com/ElenaRentero/rings-of-power-project" target=”_blank”><i
@@ -163,6 +187,10 @@
             </article>
             <article class="projects__article">
                 <h2 class="projects__article--title">Women in Tech</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-html5"></i></li>
+                    <li><i class="fa-brands fa-sass"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/womenintech.png" alt="Women in Tech">
                 <ul class="projects__article--links">
                     <a class="link" href="https://github.com/ElenaRentero/women-in-tech-project" target=”_blank”><i
@@ -173,6 +201,10 @@
             </article>
             <article class="projects__article">
                 <h2 class="projects__article--title">JavaScript Cards Project</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-sass"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/javascriptcards.png" alt="JavaScript Cards Project">
                 <ul class="projects__article--links">
                     <a class="link" href="https://github.com/ElenaRentero/javascript-cards-project" target=”_blank”><i
@@ -183,6 +215,10 @@
             </article>
             <article class="projects__article">
                 <h2 class="projects__article--title">Layout Project</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-html5"></i></li>
+                    <li><i class="fa-brands fa-sass"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/layoutproject.png" alt="Layout Project">
                 <ul class="projects__article--links">
                     <a class="link" href="https://github.com/ElenaRentero/layout-project" target=”_blank”><i
@@ -193,6 +229,11 @@
             </article>
             <article class="projects__article">
                 <h2 class="projects__article--title">Adalab Project</h2>
+                <ul class="projects__article--tech">
+                    <li><i class="fa-brands fa-react"></i></li>
+                    <li><i class="fa-brands fa-js"></i></li>
+                    <li><i class="fa-brands fa-sass"></i></li>
+                </ul>
                 <img class="projects__article--img" width="260px" src="./assets/images/adalabproject.png" alt="Adalab Project">
                 <ul class="projects__article--links">
                     <a class="link" href="https://github.com/ElenaRentero/adalab-project" target=”_blank”><i

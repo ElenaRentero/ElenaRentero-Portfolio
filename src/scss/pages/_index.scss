@@ -29,13 +29,11 @@ body {
   max-width: 1920px;
   min-height: 100vh;
   display: grid;
-  place-items: center;
-  padding: 2rem;
+  //place-items: center;
   font-family: var(--font-family);
   color: var(--dark-color);
   background: var(--bg-gradient);
-}
-
-.profile, .about, .skills {
-  height: 100vh;
+  @media all and (min-width: 720px){
+    padding: 2rem;
+  }
 }
