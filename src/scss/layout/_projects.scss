@@ -7,7 +7,7 @@
     color: var(--dark-color);
     text-align: center;
     margin: 2rem 0 2rem 0;
-    @media all and (min-width: 720px){
+    @media all and (min-width: 720px) {
       font-size: 1.5rem;
     }
   }
@@ -15,12 +15,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media all and (min-width: 720px){
+    @media all and (min-width: 720px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
     }
-    @media all and (min-width: 1200px){
+    @media all and (min-width: 1200px) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 3rem;
@@ -29,46 +29,42 @@
   &__article {
     width: 100%;
     padding: 2rem 2rem;
-    display: flex;
+    @include article();
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.375);
-    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-    border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.125);
     margin-bottom: 2rem;
     &--title {
       font-size: 0.8rem;
       font-weight: 700;
       color: var(--dark-color);
       margin-bottom: 2rem;
-      @media all and (min-width:720px){
+      @media all and (min-width: 720px) {
         font-size: 0.875rem;
       }
-      @media all and (min-width:1200px){
+      @media all and (min-width: 1200px) {
         font-size: 1.1rem;
       }
     }
-    &--tech{
+    &--tech {
       display: flex;
       gap: 3rem;
       margin-bottom: -2rem;
     }
-    &--img{
+    &--img {
       border-radius: 10px;
     }
-    &--links{
+    &--links {
       display: flex;
       margin-top: 1.5rem;
       gap: 3rem;
       padding-left: 0rem;
     }
   }
-  &__article:last-child{
-    @media all and (min-width: 720px){
+  &__article:last-child {
+    @media all and (min-width: 720px) {
       transform: translate(60%);
     }
-    @media all and (min-width: 1200px){
+    @media all and (min-width: 1200px) {
       transform: none;
     }
   }
@@ -78,14 +74,6 @@
   line-height: 1;
 }
 
-.fa-solid:hover{
-  background-color: linear-gradient(
-  45deg,
-  var(--base) 25%,
-  var(--complimentary2)
-);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-color: transparent;
+.fa-solid:hover {
+  @include gradient();
 }

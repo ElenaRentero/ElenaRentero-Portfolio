@@ -4,27 +4,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media all and (min-width: 720px){
+  @media all and (min-width: 720px) {
     justify-content: flex-end;
   }
-  &__container{
+  &__container {
     display: none;
     @media all and (min-width: 720px) {
-      display: flex;
-      right: 65%;
-      margin-top: 1rem;
-      margin-right: 20px;
-      transform: rotate(4deg);
-      position: absolute;
-      object-fit: cover;
-      overflow: hidden;
-      width: 200px;
-      height: 400px;
-      border-radius: 10px;
-      border: 10px solid #fff;
-      box-shadow: 0px 0px 30px 5px rgba(0,0,0,.3);
+      @include container();
     }
-    &--img{
+    &--img {
       width: inherit;
       height: 400px;
       object-fit: cover;
@@ -33,19 +21,15 @@
   &__article {
     width: 90%;
     padding: 2rem 2rem;
-    display: flex;
+    @include article();
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: rgba(255, 255, 255, 0.375);
-    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-    border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    @media all and (min-width: 720px){
+    @media all and (min-width: 720px) {
       padding: 4rem 2rem;
       width: 60%;
     }
-    @media all and (min-width: 1200px){
+    @media all and (min-width: 1200px) {
       margin-right: 3rem;
       margin-left: 45%;
     }
@@ -54,21 +38,22 @@
       font-weight: 700;
       color: var(--dark-color);
       margin-bottom: 1rem;
-      @media all and (min-width: 700px){
+      @media all and (min-width: 700px) {
         font-size: 1.5rem;
       }
     }
     &--text {
       font-size: 0.8rem;
       line-height: 1.5rem;
-      @media all and (min-width: 700px){
+      text-align: justify;
+      @media all and (min-width: 700px) {
         font-size: 1rem;
         line-height: 1.75rem;
       }
     }
-    &--button{
-        margin-top: 2rem;
-        width: 50%;
+    &--button {
+      margin-top: 2rem;
+      width: 50%;
     }
   }
 }

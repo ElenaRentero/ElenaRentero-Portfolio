@@ -29,11 +29,13 @@ body {
   max-width: 1920px;
   min-height: 100vh;
   display: grid;
-  //place-items: center;
   font-family: var(--font-family);
   color: var(--dark-color);
   background: var(--bg-gradient);
-  @media all and (min-width: 720px){
+  @media all and (min-width: 720px) {
     padding: 2rem;
+  }
+  @media all and (max-width: 840px) {
+    padding: 1rem;
   }
 }
