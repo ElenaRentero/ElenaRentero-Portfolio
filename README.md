@@ -51,7 +51,7 @@ En esta tercera sección el usuario encontrará dos secciones con las **tecnolog
 
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/111798280/219976998-d94d2430-96bf-476b-b1c2-8c1d8dd10abf.png">
 
-- **Proyectos*
+- **Proyectos**
 
 En esta cuarta sección se pueden observar los diferentes **proyectos que he realizado** tanto en grupo como individuales, cada uno acompañados por las **tecnologías empleadas**, una foto descriptiva y dos iconos que permiten al usuario visitar el **repositorio con el proyecto** y la **página web** en la cual se encuentra desplegado.
 
