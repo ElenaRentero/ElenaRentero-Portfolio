@@ -6,7 +6,7 @@
       width: 100%;
       &--links {
         display: flex;
-        gap: 15px;
+        gap: 8px;
         @media all and (min-width: 450px){
           gap: 20px;
           justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 .element{
-  font-size: 10px;
+  font-size: 0.76rem;
   text-align: center;
   @media all and (min-width: 600px){
     font-size: 13px;

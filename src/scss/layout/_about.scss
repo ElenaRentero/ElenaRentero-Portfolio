@@ -19,8 +19,8 @@
     }
   }
   &__article {
-    width: 90%;
-    padding: 2rem 2rem;
+    width: 100%;
+    padding: 1.5rem;
     @include article();
     flex-direction: column;
     justify-content: space-around;
@@ -34,7 +34,7 @@
       margin-left: 45%;
     }
     &--name {
-      font-size: 0.9rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--dark-color);
       margin-bottom: 2rem;
@@ -43,9 +43,9 @@
       }
     }
     &--text {
-      font-size: 0.8rem;
+      font-size: 1rem;
       line-height: 1.5rem;
-      text-align: justify;
+      margin-bottom: 0;
       @media all and (min-width: 700px) {
         font-size: 1rem;
         line-height: 1.75rem;
